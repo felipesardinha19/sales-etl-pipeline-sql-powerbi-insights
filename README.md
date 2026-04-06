@@ -59,7 +59,7 @@ ecommerce-etl-pipeline/
 
 ### 1. Clone o repositório
 ```bash
-git clone [text](https://github.com/felipesardinha19/ecommerce-etl-pipeline)
+git clone https://github.com/felipesardinha19/ecommerce-etl-pipeline.git
 cd ecommerce-etl-pipeline
 ```
 
