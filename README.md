@@ -44,13 +44,15 @@ CSV (dados brutos)
 Os dados processados pelo pipeline são consumidos no Power BI para criação de dashboards analíticos.
 
 KPIs desenvolvidos:
-Faturamento total
-Total de pedidos
-Ticket médio
+
+ - Faturamento total
+ - Total de pedidos
+ - Ticket médio
+
 Visualizações:
-Faturamento por mês
-Faturamento por loja
-Faturamento por produto
+ - Faturamento por mês
+ - Faturamento por loja
+ - Faturamento por produto
 
 ![Dashboard Power BI](docs/image/dashboard_powerbi.png)
 
@@ -97,24 +99,24 @@ Data_Pipeline_Vendas/
 ## ⚙️ Como executar
 
 # 1. Clonar o repositório
-´´´
+```
 git clone <https://github.com/felipesardinha19/python-etl-sqlserver>
-´´´
+```
 
 # 2. Instalar dependências
-´´´
+```
 pip install pandas sqlalchemy pyodbc python-dotenv
-´´´
+```
 
 # 3. Configurar variáveis de ambiente
-´´´
+```
 cp .env.example .env
-´´´
+```
 
 # 4. Executar pipeline
-´´´
+```
 python -m src.pipeline
-´´´
+```
 
 ---
 
