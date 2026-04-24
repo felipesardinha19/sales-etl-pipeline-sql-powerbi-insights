@@ -22,6 +22,8 @@ CSV (dados brutos)
     Load          → carga no SQL Server via SQLAlchemy
       ↓
  SQL Server       → tabela Vendas
+      ↓
+   Power BI       → Dashboards & Insights
 ```
 
 ---
@@ -34,6 +36,26 @@ CSV (dados brutos)
 - Preenchimento de valores nulos na coluna `Loja` com `"Online"`
 - Padronização dos nomes das lojas (capitalização e remoção de espaços)
 - Remoção de aspas desnecessárias na coluna `Produto`
+
+---
+
+## 📊 Dashboard (Power BI)
+
+Os dados processados pelo pipeline são consumidos no Power BI para criação de dashboards analíticos.
+
+KPIs desenvolvidos:
+Faturamento total
+Total de pedidos
+Ticket médio
+Visualizações:
+Faturamento por mês
+Faturamento por loja
+Faturamento por produto
+
+### 📈 Insights gerados
+A análise temporal permite identificar sazonalidade nas vendas
+Algumas lojas concentram maior parte do faturamento
+Pequeno conjunto de produtos representa grande parte das vendas
 
 ---
 
