@@ -46,7 +46,7 @@ def create_metrics(df):
 
         GOLD_PATH.mkdir(parents=True, exist_ok=True)
 
-        output_file = GOLD_PATH / f"data_clean_{datetime.now().strftime('%Y%m%d%H%M%S')}.parquet"
+        output_file = GOLD_PATH / f"metrics_{datetime.now().strftime('%Y%m%d%H%M%S')}.parquet"
 
         df.to_parquet(output_file, index=False)
         logger.info(f"Métricaspara análise criadas com sucesso e salvas em {output_file}")
