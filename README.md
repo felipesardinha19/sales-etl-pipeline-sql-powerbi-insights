@@ -79,33 +79,59 @@ Visualizações:
 Data_Pipeline_Vendas/
 │
 ├── data/
-│   └── raw/
-│       └── vendas_tech.csv
-│   └── silver/
-│       └── data_clean.parquet
+│   ├── raw/
+│   │   └── vendas_tech.csv
+│   │
+│   ├── silver/
+│   │   └── data_clean.parquet
+│   │
 │   └── gold/
-│       └── metrrics.parquet
+│       └── metrics.parquet
+│
+├── dbt_analytics/
+│   │
+│   ├── models/
+│   │   │
+│   │   ├── staging/
+│   │   │   └── stg_vendas.sql
+│   │   │
+│   │   └── marts/
+│   │       ├── dim_cliente.sql
+│   │       ├── dim_produto.sql
+│   │       ├── dim_loja.sql
+│   │       ├── dim_tempo.sql
+│   │       └── fato_vendas.sql
+│   │
+│   ├── macros/
+│   ├── tests/
+│   ├── seeds/
+│   ├── snapshots/
+│   ├── analyses/
+│   │
+│   ├── dbt_project.yml
+│   ├── packages.yml
+│   └── README.md
 │
 ├── docs/
-│   └── image/
+│   └── images/
 │       └── dashboard_powerbi.png
-│
-├── logs/
-│   └── pipeline.log
 │
 ├── src/
 │   ├── utils/
 │   │   └── logger.py
+│   │
 │   ├── extract.py
 │   ├── transform.py
 │   ├── load.py
 │   └── pipeline.py
 │
+├── logs/
+│   └── pipeline.log
+│
 ├── .env
 ├── .env.example
 ├── .gitignore
 └── README.md
-```
 ---
 
 ## ⚙️ Como executar
