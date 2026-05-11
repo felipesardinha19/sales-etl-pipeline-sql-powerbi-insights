@@ -1,6 +1,6 @@
-# 🛒 Pipeline ETL End-to-End com Dashboard
+# 🛒 Pipeline Analytics Engineering End-to-End
 
-Pipeline ETL desenvolvido em Python para extração, transformação e carga de dados de vendas de e-commerce em um banco de dados SQL Server e com um Dashboard e Insights no Power BI.
+Projeto de pipeline de dados End-to-End utilizando Python para ingestão e processamento de dados, arquitetura Medallion para organização das camadas analíticas, dbt para transformação e modelagem dimensional (Star Schema), SQL Server como Data Warehouse e Power BI para construção de dashboards e análise de métricas de negócio.
 
 ---
 
