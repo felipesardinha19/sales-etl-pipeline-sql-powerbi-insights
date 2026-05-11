@@ -162,6 +162,7 @@ python -m src.pipeline
 
 - Python 3.12
 - Pandas
+- DBT (Data Build Tools)
 - SQLAlchemy
 - SQL Server Express
 - Power BI
