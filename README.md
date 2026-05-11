@@ -13,25 +13,27 @@ Script que realiza o processo completo de ETL a partir de um dataset fictício d
 ## 🏗️ Arquitetura
 
 ```
-   RAW/CSV 
-      ↓
-   Extract        → leitura do arquivo CSV com Pandas
-      ↓
-  Transform       → Etapa de limpeza e criação de métricas
-      ↓
-   Limpeza        → limpeza e padronização dos dados
-      ↓
-    Silver        → Salva na pasta/camada Silver
-      ↓
-   Metrics        → Cria métricas para analise
-      ↓
-     Gold         → Salva na pasta/camada Gold
-      ↓
-     Load          → carga no SQL Server via SQLAlchemy
-      ↓
- SQL Server       → tabela Vendas
-      ↓
-   Power BI       → Dashboards & Insights
+   RAW / CSV            → Arquivo bruto de vendas utilizado como origem dos dados
+        ↓
+   Extract              → Leitura do arquivo CSV utilizando Pandas
+        ↓
+   RAW Layer            → Armazenamento dos dados brutos sem transformação
+        ↓
+   Transform            → Limpeza, padronização e tratamento inicial dos dados
+        ↓
+   Silver Layer         → Dados confiáveis salvos em formato Parquet
+        ↓
+   Load                 → Carga dos dados tratados no SQL Server via SQLAlchemy
+        ↓
+   SQL Server           → Camada persistida para consumo analítico
+        ↓
+   dbt Staging          → Padronização semântica e preparação analítica
+        ↓
+   dbt Marts            → Modelagem dimensional com tabelas fato e dimensão
+        ↓
+   Star Schema          → Estrutura analítica otimizada para consultas e BI
+        ↓
+   Power BI             → Dashboards, KPIs e geração de insights
 ```
 
 ---
