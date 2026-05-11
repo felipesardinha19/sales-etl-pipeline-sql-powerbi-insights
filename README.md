@@ -85,11 +85,8 @@ Data_Pipeline_Vendas/
 │   │   └── vendas_tech.csv
 │   │
 │   ├── silver/
-│   │   └── data_clean.parquet
-│   │
-│   └── gold/
-│       └── metrics.parquet
-│
+│       └── data_clean.parquet
+│   
 ├── dbt_analytics/
 │   │
 │   ├── models/
