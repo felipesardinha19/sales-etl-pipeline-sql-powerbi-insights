@@ -1,0 +1,49 @@
+version: 2
+
+models:
+  - name: stg_vendas
+    description: > 
+      Camada de staging contendo informações sobre as vendas,
+      sera usada como base para criação das outras dimensões
+
+    columns:
+      - name: ID_Pedido
+        description: Identficação dos pedidos(vendas) feitos pela Empresa
+
+      - name: data_venda
+        description: Data em que a venda foi realizada
+
+      - name: loja
+        description: Local onde foi realizada a venda
+
+      - name: produto
+        description: Nome do produto vendido
+
+  - name: dim_cliente
+    description: Dimensão contendo os clientes únicos do sistema.
+
+    columns:
+      - name: id_cliente
+        description: Chave surrogate da dimensão cliente.
+        tests:
+          - unique
+          - not_null
+
+      - name: cliente
+        description: Nome ou identificador do cliente presente na origem da venda.
+        tests:
+          - not_null
+
+  - name: fato_vendas
+    description: Tabela fato contendo as transações de vendas.
+
+    columns:
+      - name: ID_Pedido
+        description: Identificador único do pedido.
+        tests:
+          - not_null
+
+      - name: valor_total
+        description: Valor total da venda calculado por quantidade e preço unitário.
+        tests:
+          - not_null
