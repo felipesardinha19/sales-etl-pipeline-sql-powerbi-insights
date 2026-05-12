@@ -10,6 +10,7 @@ SELECT
 	p.id_produto,
 	l.id_loja,
 	t.data_venda,
+	t.id_data,
 	v.qtd,
 	v.preco_unitario,
 	(v.qtd * v.preco_unitario) AS valor_total
