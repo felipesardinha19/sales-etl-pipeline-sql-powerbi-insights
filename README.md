@@ -75,6 +75,10 @@ Visualizações:
 
 ---
 
+## ⭐ Star Schema
+
+![Lineage DBT](docs/image/dbt_lineage.png)
+
 ## 🗂️ Estrutura do projeto
 
 ```
